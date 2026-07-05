@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Weather Dashboard</title>
+    <!-- Google Fonts for crisp professional typography -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="weather-container">
+        <!-- Search Component Form (Handles submissions professionally) -->
+        <form class="search-form" onsubmit="event.preventDefault();">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Search City..." aria-label="Search City">
+            </div>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+
+        <!-- Weather Display Metrics Card -->
+        <article class="weather-card">
+
+            <!-- Place this inside your .weather-card element -->
+        <div id="loading-spinner" class="spinner-container hidden">
+            <div class="loading-circle"></div>
+            <p>Fetching weather details...</p>
+        </div>
+
+            
+            <header class="location-header  hidden">
+                <span class="geo-icon">📍</span>
+                <h1 class="location-name">Hyderabad, <span class="country">India</span></h1>
+            </header>
+
+            <div class="main-weather">
+                <div class="weather-condition-group">
+                    <img class="weather-icon" src="" alt=""></img>
+                    <p class="weather-desc">Clear Sky</p>
+                </div>
+                <div class="temperature-display">
+                    <span class="current-temp">31</span><span class="temp-unit">°C</span>
+                </div>
+            </div>
+
+            <!-- Detailed Metrics Grid Layout -->
+            <section class="metrics-grid">
+                <div class="metric-item">
+                    <span class="metric-label">Feels Like</span>
+                    <span class="metric-value" id="feelsLike">34°C</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">💧 Humidity</span>
+                    <span class="metric-value" id="humidity">72%</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">🌬️ Wind</span>
+                    <span class="metric-value" id="wind_speed">10 km/h</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-label">🕒 Local Time</span>
+                    <span class="metric-value" id="local-time">08:32 AM</span>
+                </div>
+            </section>
+
+        </article>
+    </main>
+    
+<script src="script.js"></script>
+</body>
+</html>
